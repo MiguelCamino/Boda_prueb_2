@@ -1,0 +1,239 @@
+/* Estilos generales */
+body {
+  font-family: 'Marcellus', serif;
+  color: #4F3566;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-border {
+  border: 8px solid #fff;
+  padding: 20px;
+}
+
+/* Menú */
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Sección de cuenta regresiva */
+#countdown {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.countdown-item {
+  border: 1px solid #CBBADB;
+  padding: 10px 25px;
+}
+
+/* Sección Pareja */
+#pareja {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.pareja-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.novio, .novia {
+  display: flex;
+  align-items: center;
+}
+
+.novio img, .novia img {
+  border: 8px solid #4F3566;
+  margin: 14px;
+}
+
+
+.ubicaciones {
+    background: white;
+    border: 3px solid #4F3566;
+    border-radius: 10px;
+    padding: 20px;
+    width: 48%;
+    text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+footer {
+  background-color: #FAF0FF;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer img {
+  width: 100px;
+  height: auto;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Mobile: hasta 480px */
+@media (max-width: 480px) {
+  /* Header */
+  .header-content h1 {
+    font-size: 48px;
+  }
+
+  .header-content h3 {
+    font-size: 18px;
+  }
+
+  .header-border {
+    padding: 10px;
+  }
+
+  /* Menú */
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  /* Cuenta regresiva */
+  .countdown-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .countdown-item {
+    padding: 5px 10px;
+  }
+
+  /* Sección Pareja */
+  .pareja-container {
+    flex-direction: column;
+  }
+
+  .novio, .novia {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .novio img, .novia img {
+    margin: 10px 0;
+  }
+
+  /* Footer */
+  footer img {
+    width: 80px;
+  }
+}
+
+/* Tablet: de 481px a 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Header */
+  .header-content h1 {
+    font-size: 64px;
+  }
+
+  .header-content h3 {
+    font-size: 20px;
+  }
+
+  /* Menú */
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .menu li {
+    margin: 5px 10px;
+  }
+
+  /* Sección Pareja */
+  .pareja-container {
+    flex-direction: column;
+  }
+
+  .novio, .novia {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .novio img, .novia img {
+    margin: 0 10px;
+  }
+}
+
+/* Desktop: de 769px en adelante */
+@media (min-width: 769px) {
+  /* Ajustes específicos para desktop si es necesario */
+}
