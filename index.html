@@ -1,147 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miguel y Ruth - ¡Nos casamos!</title>
-  <link rel="stylesheet" href="css/main.css"> 
-<link rel="stylesheet" href="js/main.js"> 
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel y Ruth - Boda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header con menú -->
-  <header>
-    <nav>
-      <div class="menu-icon" id="menu-icon">&#9776;</div>
-      <ul class="menu" id="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#pareja">Pareja</a></li>
-        <li><a href="#historia">Historia de amor</a></li>
-        <li><a href="#fotos">Fotos</a></li>
-        <li><a href="#ubicaciones">Ubicaciones</a></li>
-        <li><a href="#confirmacion">Confirmación</a></li>
-      </ul>
-    </nav>
-    <div class="header-content">
-      <div class="header-border">
+    <!-- Header -->
+    <header class="hero-header">
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#pareja">Pareja</a></li>
+                <li class="nav-item"><a href="#historia">Historia de Amor</a></li>
+                <li class="nav-item"><a href="#ubicaciones">Ubicaciones</a></li>
+                <li class="nav-item"><a href="#confirmacion">Confirmación</a></li>
+                <li class="nav-item"><a href="#subir-fotos">Subir Fotos</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header Content -->
+    <section id="home" class="header-content">
         <h1>Miguel y Ruth</h1>
         <h3>Se van a casar</h3>
         <p>05 Jul 2025</p>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- Sección de cuenta regresiva -->
-  <section id="countdown">
-    <h2>Cuenta atrás hasta la boda</h2>
-    <div class="countdown-container">
-      <div class="countdown-item"><span id="days">00</span><span>Días</span></div>
-      <div class="countdown-item"><span id="hours">00</span><span>Horas</span></div>
-      <div class="countdown-item"><span id="minutes">00</span><span>Minutos</span></div>
-      <div class="countdown-item"><span id="seconds">00</span><span>Segundos</span></div>
-    </div>
-  </section>
-
-  <!-- Sección Pareja -->
-  <section id="pareja">
-    <h2>Pareja</h2>
-    <div class="pareja-container">
-      <div class="novio">
-        <img src="assets/novio.jpg" alt="Novio">
-        <div class="texto">
-          <h3>Miguel</h3>
-          <p>El novio</p>
-          <p>Descripción sobre Miguel...</p>
+    <!-- Countdown -->
+    <section id="countdown" class="countdown-section">
+        <h2>Cuenta atrás hasta la boda</h2>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span class="days">00</span>
+                <span>Días</span>
+            </div>
+            <div class="countdown-item">
+                <span class="hours">00</span>
+                <span>Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span class="minutes">00</span>
+                <span>Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span class="seconds">00</span>
+                <span>Segundos</span>
+            </div>
         </div>
-      </div>
-      <div class="novia">
-        <img src="assets/novia.jpg" alt="Novia">
-        <div class="texto">
-          <h3>Ruth</h3>
-          <p>La novia</p>
-          <p>Descripción sobre Ruth...</p>
+    </section>
+
+    <!-- Sección Pareja -->
+    <section id="pareja" class="couple-section">
+        <h1>Pareja</h1>
+        <div class="couple-container">
+            <div class="couple-photo">
+                <img src="placeholder-novio.jpg" alt="Novio">
+            </div>
+            <div class="couple-info">
+                <h3>Miguel</h3>
+                <p>El novio</p>
+                <p>Descripción sobre Miguel...</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección Historia de Amor -->
-  <section id="historia">
-    <h2>Historia de amor</h2>
-    <div class="slider">
-      <div class="slide">
-        <img src="assets/historia1.jpg" alt="Cómo nos conocimos">
-        <div class="texto">
-          <h3>Cómo nos conocimos</h3>
-          <p>Descripción de cómo se conocieron...</p>
+        <div class="couple-container">
+            <div class="couple-info">
+                <h3>Ruth</h3>
+                <p>La novia</p>
+                <p>Descripción sobre Ruth...</p>
+            </div>
+            <div class="couple-photo">
+                <img src="placeholder-novia.jpg" alt="Novia">
+            </div>
         </div>
-      </div>
-      <!-- Más slides aquí -->
-    </div>
-  </section>
+    </section>
 
-  <!-- Sección Fotos -->
-  <section id="fotos">
-    <h2>Nuestras fotos</h2>
-    <div class="fotos-slider">
-      <div class="foto-item"><img src="assets/foto1.jpg" alt="Foto 1"></div>
-      <!-- Más fotos aquí -->
-    </div>
-  </section>
+    <!-- Sección Historia de Amor -->
+    <section id="historia" class="story-section">
+        <h1>Historia de Amor</h1>
+        <div class="story-content">
+            <div class="story-photo">
+                <img src="placeholder-historia1.jpg" alt="Como nos conocimos">
+            </div>
+            <div class="story-text">
+                <h3>Como nos conocimos</h3>
+                <p>Descripción de cómo se conocieron...</p>
+            </div>
+        </div>
+        <div class="slider-container">
+            <button class="slider-arrow left">&#10094;</button>
+            <div class="slider-item">
+                <h3>Nuestra primera cita</h3>
+                <p>Descripción de la primera cita...</p>
+            </div>
+            <div class="slider-item">
+                <h3>Como se lo propuse</h3>
+                <p>Descripción de la propuesta...</p>
+            </div>
+            <button class="slider-arrow right">&#10095;</button>
+        </div>
+    </section>
 
-  <!-- Sección Ubicaciones -->
-  <section id="ubicaciones">
-    <h2>Ubicaciones</h2>
-    <div class="mapas-container">
-      <div class="mapa">
-        <h3>Lugar de la ceremonia</h3>
-        <p>Gruta nuestra señora de Begoña</p>
-        <p>05 Jul 2025 - 17:00</p>
-        <iframe src="://www.google.com/maps/ehttpsmbed?pb=..."></iframe>
-      </div>
-      <div class="mapa">
-        <h3>Lugar de la celebración</h3>
-        <p>Nombre del lugar</p>
-        <p>05 Jul 2025 - 18:30</p>
-        <iframe src="https://maps.app.goo.gl/B9iPKQMGKwYipxoE8"></iframe>
-      </div>
-    </div>
-  </section>
+    <!-- Sección Ubicaciones -->
+    <section id="ubicaciones" class="location-section">
+        <h1>Ubicaciones</h1>
+        <div class="location-container">
+            <div class="location-item">
+                <h3>Lugar de la ceremonia</h3>
+                <p>Gruta nuestra señora de Begoña</p>
+                <p>05 Jul 2025 - 17:00</p>
+                <div class="map-placeholder"></div>
+            </div>
+            <div class="location-item">
+                <div class="map-placeholder"></div>
+                <h3>Lugar de celebración</h3>
+                <p>Nombre del lugar</p>
+                <p>05 Jul 2025 - 18:30</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Sección Confirmación -->
-  <section id="confirmacion">
-    <h2>Confirmación</h2>
-    <form>
-      <input type="text" placeholder="Nombre y apellidos" required>
-      <select>
-        <option value="si">Asistiré</option>
-        <option value="no">No puedo asistir</option>
-      </select>
-      <select>
-        <option value="carne">Carne</option>
-        <option value="pescado">Pescado</option>
-      </select>
-      <button type="submit">Confirmar</button>
-    </form>
-  </section>
+    <!-- Sección Confirmación -->
+    <section id="confirmacion" class="confirmation-section">
+        <h1>Confirmación</h1>
+        <div class="confirmation-container">
+            <div class="confirmation-photo">
+                <img src="placeholder-confirmacion.jpg" alt="Foto de confirmación">
+            </div>
+            <form class="confirmation-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="asistencia">Asistencia:</label>
+                    <select id="asistencia">
+                        <option value="si">Asistiré</option>
+                        <option value="no">No puedo asistir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="plato">Plato principal:</label>
+                    <select id="plato">
+                        <option value="carne">Carne</option>
+                        <option value="pescado">Pescado</option>
+                    </select>
+                </div>
+                <button type="submit">Confirmar</button>
+            </form>
+        </div>
+    </section>
 
-  <!-- Sección Subir Fotos -->
-  <section id="subir-fotos">
-    <h2>Sube tus fotos</h2>
-    <p>Aquí puedes subir las fotos que tomes durante nuestra boda. ¡Nos encantaría verlas!</p>
-    <form>
-      <input type="file" accept="image/*">
-      <button type="submit">Subir foto</button>
-    </form>
-  </section>
+    <!-- Sección Subir Fotos -->
+    <section id="subir-fotos" class="upload-section">
+        <h1>Sube tus fotos</h1>
+        <p>Aquí puedes subir las fotos que tomes durante nuestra boda. ¡Nos encantaría verlas!</p>
+        <form class="upload-form">
+            <input type="file" accept="image/*" required>
+            <button type="submit">Subir foto</button>
+        </form>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>Miguel y Ruth</p>
-      <img src="assets/footer.jpg" alt="Foto de la pareja">
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Miguel y Ruth</p>
+        <img src="placeholder-footer.jpg" alt="Foto de la pareja">
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
