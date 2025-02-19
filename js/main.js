@@ -35,4 +35,3 @@ navItems.forEach(item => {
         hamburgerMenu.classList.remove('active');
     });
 });
-
