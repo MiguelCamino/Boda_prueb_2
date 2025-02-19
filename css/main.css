@@ -68,7 +68,7 @@ h1, h2, h3 {
 .header-content {
     padding: 100px 20px;
     text-align: center;
-    background: url('placeholder-header.jpg') center/cover;
+    background: url('../img/header_1.jpg'); center/cover;
     color: white;
 }
 
