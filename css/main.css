@@ -229,6 +229,109 @@ h1, h2, h3 {
     display: block;
 }
 
+/* Sección Momentos */
+.moments-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.moments-section h1 {
+    font-size: 56px;
+    margin-bottom: 40px;
+}
+
+.moments-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.moments-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.moment-photo {
+    width: 300px;
+    height: 400px;
+    border: 8px solid #4F3566;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.moment-photo:hover {
+    transform: scale(1.05);
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #4F3566;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.slider-arrow.left {
+    left: 20px;
+}
+
+.slider-arrow.right {
+    right: 20px;
+}
+
+.slider-arrow:hover {
+    color: #CBBADB;
+}
+
+/* Estilo para la foto centrada */
+.slider-item.active .moment-photo {
+    transform: scale(1.2);
+    z-index: 5;
+}
+
+/* Modal para la foto en tamaño real */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 8px solid #4F3566;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
 /* Sección Ubicaciones */
 .location-section {
     padding: 80px 20px;
