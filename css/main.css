@@ -273,9 +273,8 @@ h1, h2, h3 {
 }
 
 .slider-arrow {
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-10%);
     background: none;
     border: none;
     font-size: 32px;
