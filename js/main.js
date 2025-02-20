@@ -18,6 +18,33 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 
+// Slider para Historia de Amor
+const storySlider = document.querySelector('.story-slider');
+const storySlides = document.querySelectorAll('.story-slider .slider-item');
+const storyPrevArrow = document.querySelector('.story-section .slider-arrow.left');
+const storyNextArrow = document.querySelector('.story-section .slider-arrow.right');
+let storyCurrentIndex = 0;
+
+function showStorySlide(index) {
+    storySlides.forEach((slide, i) => {
+        if (i === index) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+}
+
+storyPrevArrow.addEventListener('click', () => {
+    storyCurrentIndex = (storyCurrentIndex > 0) ? storyCurrentIndex - 1 : storySlides.length - 1;
+    showStorySlide(storyCurrentIndex);
+});
+
+storyNextArrow.addEventListener('click', () => {
+    storyCurrentIndex = (storyCurrentIndex < storySlides.length - 1) ? storyCurrentIndex + 1 : 0;
+    showStorySlide(storyCurrentIndex);
+});
+
 // Slider de Momentos
 const slider = document.querySelector('.moments-slider');
 const slides = document.querySelectorAll('.slider-item');
