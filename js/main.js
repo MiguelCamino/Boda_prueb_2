@@ -20,9 +20,9 @@ setInterval(updateCountdown, 1000);
 
 // Slider para Historia de Amor
 const storySlider = document.querySelector('.story-slider');
-const storySlides = document.querySelectorAll('.story-slider .slider-item');
-const storyPrevArrow = document.querySelector('.story-section .slider-arrow.left');
-const storyNextArrow = document.querySelector('.story-section .slider-arrow.right');
+const storySlides = document.querySelectorAll('.story-slide');
+const storyPrevArrow = document.querySelector('.story-arrow.left');
+const storyNextArrow = document.querySelector('.story-arrow.right');
 let storyCurrentIndex = 0;
 
 function showStorySlide(index) {
@@ -45,32 +45,32 @@ storyNextArrow.addEventListener('click', () => {
     showStorySlide(storyCurrentIndex);
 });
 
-// Slider de Momentos
-const slider = document.querySelector('.moments-slider');
-const slides = document.querySelectorAll('.slider-item');
-const prevArrow = document.querySelector('.slider-arrow.left');
-const nextArrow = document.querySelector('.slider-arrow.right');
-let currentIndex = 0;
+// Slider para Momentos (infinito)
+const momentsSlider = document.querySelector('.moments-slider');
+const momentsSlides = document.querySelectorAll('.moments-slide');
+const momentsPrevArrow = document.querySelector('.moments-arrow.left');
+const momentsNextArrow = document.querySelector('.moments-arrow.right');
+let momentsCurrentIndex = 0;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
+function showMomentsSlide(index) {
+    momentsSlides.forEach((slide, i) => {
         if (i === index) {
             slide.classList.add('active');
         } else {
             slide.classList.remove('active');
         }
     });
-    slider.style.transform = `translateX(-${index * 100}%)`;
+    momentsSlider.style.transform = `translateX(-${momentsCurrentIndex * 33.33}%)`;
 }
 
-prevArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-    showSlide(currentIndex);
+momentsPrevArrow.addEventListener('click', () => {
+    momentsCurrentIndex = (momentsCurrentIndex > 0) ? momentsCurrentIndex - 1 : momentsSlides.length - 1;
+    showMomentsSlide(momentsCurrentIndex);
 });
 
-nextArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-    showSlide(currentIndex);
+momentsNextArrow.addEventListener('click', () => {
+    momentsCurrentIndex = (momentsCurrentIndex < momentsSlides.length - 1) ? momentsCurrentIndex + 1 : 0;
+    showMomentsSlide(momentsCurrentIndex);
 });
 
 // Modal para fotos
