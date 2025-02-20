@@ -439,9 +439,6 @@ h1, h2, h3 {
     transition: background 0.3s ease;
 }
 
-.confirmation-form button:hover {
-    background: #3C3641;
-}
 
 /* Sección Subir Fotos */
 .upload-section {
@@ -494,10 +491,21 @@ h1, h2, h3 {
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
-.upload-form button:hover {
-    background: #3C3641;
+/* Estilos para los CTA */
+.confirmation-form button, .upload-form button {
+    background: #4F3566;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+
+.confirmation-form button:hover, .upload-form button:hover {
+    background: #CBBADB;
+}
+
 
 /* Footer */
 .footer {
