@@ -375,7 +375,7 @@ h1, h2, h3 {
 
 .location-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     aling-items: baseline;
     gap: 40px;
 }
