@@ -519,6 +519,21 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
+/* Estilos para los CTA */
+.confirmation-form button, .upload-form button {
+    background: #4F3566;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.confirmation-form button:hover, .upload-form button:hover {
+    background: #CBBADB;
+}
+
 /* Media Queries para Mobile */
 @media (max-width: 768px) {
     .nav-menu {
