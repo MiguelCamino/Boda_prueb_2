@@ -273,6 +273,7 @@ h1, h2, h3 {
 }
 
 .slider-arrow {
+    psition: absolute;
     top: 50%;
     transform: translateY(-10%);
     background: none;
