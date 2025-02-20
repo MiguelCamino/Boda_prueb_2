@@ -68,7 +68,7 @@ h1, h2, h3 {
 .header-content {
     padding: 100px 20px;
     text-align: center;
-    background: url('/img/header_1.jpg');
+    background: url('../img/header_1.jpg'); center/cover;
     color: white;
 }
 
@@ -539,60 +539,5 @@ h1, h2, h3 {
     .couple-photo, .story-photo, .confirmation-photo {
         width: 100%;
         height: auto;
-    }
-}
-/* Menú Hamburguesa */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background: #4F3566;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-
-.hamburger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Menú para móvil */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        z-index: 1000;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
-
-    .hamburger-menu {
-        display: flex;
     }
 }
