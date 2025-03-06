@@ -60,9 +60,13 @@ function showMomentsSlide(index) {
             slide.classList.remove('active');
         }
     });
-    momentsSlider.style.transform = `translateX(-${momentsCurrentIndex * 33.33}%)`;
+       // Ajustar el desplazamiento del slider para móviles
+    if (window.innerWidth <= 768) {
+        momentsSlider.style.transform = `translateX(-${momentsCurrentIndex * 100}%)`;
+    } else {
+        momentsSlider.style.transform = `translateX(-${momentsCurrentIndex * 33.33}%)`;
+    }
 }
-
 momentsPrevArrow.addEventListener('click', () => {
     momentsCurrentIndex = (momentsCurrentIndex > 0) ? momentsCurrentIndex - 1 : momentsSlides.length - 1;
     showMomentsSlide(momentsCurrentIndex);
