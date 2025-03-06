@@ -68,7 +68,7 @@ h1, h2, h3 {
 .header-content {
     padding: 100px 20px;
     text-align: center;
-    background: url('../img/header_1.jpg'); center/cover;
+    background: url('../img/header_1.jpg') center/cover;
     color: white;
 }
 
@@ -127,9 +127,9 @@ h1, h2, h3 {
 
 .couple-container {
     display: flex;
-    flea-direction: row;
+    flex-direction: row;
     justify-content: space-evenly;
-    aling-items: center;
+    align-items: center;
     gap: 40px;
     margin: 40px 0;
 }
@@ -326,14 +326,7 @@ h1, h2, h3 {
     color: #CBBADB;
 }
 
-
-/* Estilo para la foto centrada */
-.slider-item.active .moment-photo {
-    transform: scale(1.2);
-    z-index: 5;
-}
-
-/* Modal para la foto en tamaño real */
+/* Modal para fotos */
 .modal {
     display: none;
     position: fixed;
@@ -376,7 +369,7 @@ h1, h2, h3 {
 .location-container {
     display: flex;
     justify-content: space-evenly;
-    aling-items: baseline;
+    align-items: baseline;
     gap: 40px;
 }
 
@@ -421,7 +414,7 @@ h1, h2, h3 {
 .confirmation-container {
     display: flex;
     justify-content: space-evenly;
-  aling-items: center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -511,8 +504,6 @@ h1, h2, h3 {
     transition: background 0.3s ease;
 }
 
-}
-
 .upload-form button {
     background: #4F3566;
     color: white;
@@ -547,23 +538,9 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
-/* Estilos para los CTA */
-.confirmation-form button, .upload-form button {
-    background: #4F3566;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.confirmation-form button:hover, .upload-form button:hover {
-    background: #CBBADB;
-}
-
 /* Media Queries para responsive design */
 @media (max-width: 768px) {
+    /* Menú Hamburguesa */
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -571,57 +548,124 @@ h1, h2, h3 {
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
     }
 
     .nav-menu.active {
         display: flex;
     }
 
+    .nav-item {
+        margin: 10px 0;
+    }
+
     .hamburger-menu {
         display: flex;
     }
 
+    /* Header Content */
     .header-content h1 {
-        font-size: 2rem;
+        font-size: 48px;
     }
 
     .header-content h3 {
-        font-size: 1.5rem;
+        font-size: 18px;
     }
 
-    .header-content p {
-        font-size: 1.2rem;
+    /* Countdown Timer */
+    .countdown-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .countdown-item {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .countdown-item span {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
+    /* Sección Pareja */
     .couple-container {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .story-content, .moments-container {
+    .couple-photo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Sección Historia de Amor */
+    .story-content {
         flex-direction: column;
+        align-items: center;
     }
 
+    .story-photo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Sección Momentos */
+    .moments-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .moments-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Sección Ubicaciones */
     .location-container {
         flex-direction: column;
+        align-items: center;
     }
 
+    .location-item {
+        max-width: 100%;
+    }
+
+    /* Sección Confirmación */
     .confirmation-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .confirmation-photo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .confirmation-form {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
 @media (min-width: 769px) {
+    /* Estilos para pantallas más grandes */
     .couple-container {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .story-content, .moments-container {
+    .story-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .moments-slider {
         flex-direction: row;
         justify-content: space-around;
     }
